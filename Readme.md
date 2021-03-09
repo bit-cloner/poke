@@ -42,7 +42,7 @@ aws configure
 ```
 pulumi login s3://name-of-your-state-bucket
 ```
-4. Select which stack you want to use- This repo has a dev stack
+4. Select the stack you want to use- This repo has a dev stack
 ```
 pulumi stack select dev
 ```
