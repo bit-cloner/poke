@@ -1,0 +1,3 @@
+name: eks18
+runtime: nodejs
+description: pulumi code for eks clusters

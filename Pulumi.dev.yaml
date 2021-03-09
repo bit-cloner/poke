@@ -1,0 +1,63 @@
+encryptionsalt: v1:/wqr1/XXXXXXXXXXXXX
+  aws:region: eu-west-1
+  eks:environment: dev
+  eks:eks18:
+    clustername: eks18-dev
+    vpcId: "abcde"
+    privateSubnets:
+      - "abcd"
+      - "fdjhjfdd"
+      - "dfdjhjjj"
+    publicSubnets:
+      - "abcd"
+      - "fdjhjfdd"
+      - "dfdjhjjj"
+    version: "1.18"
+    nodegroup:
+      - desiredcapacity: 1
+        machinetype: c5d.xlarge
+        amiId: ami-00d7f1aeda5144f18
+        maximumsize: 4
+        minimumsize: 1
+        name: apps-spot3
+        ostype: linux
+        spotprice: "0.6"
+      - desiredcapacity: 1
+        machinetype: c5d.2xlarge
+        amiId: ami-00d7f1aeda5144f18
+        maximumsize: 2
+        minimumsize: 1
+        name: build-agents-1
+        ostype: linux
+        spotprice: "0.6"
+      
+  eks:eks19-dev:
+    clustername: eks19-dev
+    vpcId: "abcde"
+    privateSubnets:
+      - "abcd"
+      - "fdjhjfdd"
+      - "dfdjhjjj"
+    publicSubnets:
+      - "abcd"
+      - "fdjhjfdd"
+      - "dfdjhjjj"
+    version: "1.19"
+    nodegroup:
+      - desiredcapacity: 1
+        machinetype: c5d.xlarge
+        amiId: ami-0f871ceaad38d8f1b # different to version 1.18
+        maximumsize: 4
+        minimumsize: 1
+        name: apps-spot4
+        ostype: linux
+        spotprice: "0.6"
+      - desiredcapacity: 1
+        machinetype: c5d.xlarge
+        amiId: ami-0a8620939730fd95a # Microsoft Windows Server 2019 Full optimized for EKS and provided by Amazon
+        dSize: 100
+        maximumsize: 4
+        minimumsize: 1
+        name: apps-windows-spot4
+        ostype: windows
+        spotprice: "0.6"
