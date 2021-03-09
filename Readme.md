@@ -1,7 +1,7 @@
 ### POKE - Provision Opinionated Kubernetes on EKS ![alt text](pokelogo.png "POKE")
 Poke is infrastructure as software to provision EKS cluster in an opinianated way.
 Code is written in nodejs utilising pulumi framework.
-It is opinianated in such a way to improve security and simplicity.Consider this similar to terraform module. This package can be used to provision eks clusters declaratively with immutability and repeatability.
+It is opinionated in such a way to improve security and simplicity.Consider this similar to terraform module. This package can be used to provision eks clusters declaratively with immutability and repeatability.
 
 Please note thi is a MVP and code quality isn't that great. But the good thing is it works.
 I should probably make some code optimisations going forward. I welcome PRs to make improvements.
