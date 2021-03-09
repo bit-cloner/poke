@@ -18,7 +18,8 @@ It has following capabilities
 8. Uses spot instances for worker nodes
 9. Has the ability to attach existing security groups to worker nodes.
 10. Has the ability to provision both Linux and Windows worker groups
-11. VPC and subnets used are pre existing
+11. Pre existing VPC and subnets are used
+12. Uses bottlerocket linux distribution for enhanced security of worker nodes
 
 Some of the config options can be set as per your requirements in pulumi.dev.yaml file. Pulumi keeps all the config in this file.
 
