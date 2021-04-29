@@ -57,3 +57,6 @@ This should create 2 clusters eks18-dev and eks19-dev as per declerations made i
 You can tweak these elements to customise as per your requirements.
 For example if you want to add another cluster to your stack , add another code block and edit index.js file accordingly.
 
+<h3 align="left">Support:</h3>
+<p><a href="https://www.buymeacoffee.com/welldone"> <img align="left" src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="50" width="210" alt="welldone" /></a></p><br><br>
+
