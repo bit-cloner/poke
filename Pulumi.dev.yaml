@@ -1,63 +1,27 @@
-encryptionsalt: v1:/wqr1/XXXXXXXXXXXXX
-  aws:region: eu-west-1
+encryptionsalt: v1:eDtNX4WkSPQ=:v1:CMxnqv3RIHCCUFGb:E12WbwqP00LJEYKLpWHVWRFGPxnxKA==
+config:
+  aws:region: eu-west-2
   eks:environment: dev
-  eks:eks18:
-    clustername: eks18-dev
-    vpcId: "abcde"
-    privateSubnets:
-      - "abcd"
-      - "fdjhjfdd"
-      - "dfdjhjjj"
-    publicSubnets:
-      - "abcd"
-      - "fdjhjfdd"
-      - "dfdjhjjj"
-    version: "1.18"
-    nodegroup:
-      - desiredcapacity: 1
-        machinetype: c5d.xlarge
-        amiId: ami-00d7f1aeda5144f18
-        maximumsize: 4
+  eks:Clusters:
+    - clustername: eks21-dev
+      master_api_privatecaccess: false
+      master_api_publicaccess: true
+      nodegroup:
+      - amiId: ami-08a9b54e6e2a3109b
+        desiredcapacity: 1
+        machinetype: t3.large
+        maximumsize: 3
         minimumsize: 1
-        name: apps-spot3
+        name: machine-type-A
         ostype: linux
         spotprice: "0.6"
-      - desiredcapacity: 1
-        machinetype: c5d.2xlarge
-        amiId: ami-00d7f1aeda5144f18
-        maximumsize: 2
+      - amiId: ami-08a9b54e6e2a3109b
+        desiredcapacity: 1
+        machinetype: t3.medium
+        maximumsize: 3
         minimumsize: 1
-        name: build-agents-1
+        name: machine-type-B
         ostype: linux
         spotprice: "0.6"
+      version: "1.20"
       
-  eks:eks19-dev:
-    clustername: eks19-dev
-    vpcId: "abcde"
-    privateSubnets:
-      - "abcd"
-      - "fdjhjfdd"
-      - "dfdjhjjj"
-    publicSubnets:
-      - "abcd"
-      - "fdjhjfdd"
-      - "dfdjhjjj"
-    version: "1.19"
-    nodegroup:
-      - desiredcapacity: 1
-        machinetype: c5d.xlarge
-        amiId: ami-0f871ceaad38d8f1b # different to version 1.18
-        maximumsize: 4
-        minimumsize: 1
-        name: apps-spot4
-        ostype: linux
-        spotprice: "0.6"
-      - desiredcapacity: 1
-        machinetype: c5d.xlarge
-        amiId: ami-0a8620939730fd95a # Microsoft Windows Server 2019 Full optimized for EKS and provided by Amazon
-        dSize: 100
-        maximumsize: 4
-        minimumsize: 1
-        name: apps-windows-spot4
-        ostype: windows
-        spotprice: "0.6"
