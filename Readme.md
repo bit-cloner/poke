@@ -22,7 +22,8 @@ It has following capabilities
 12. Uses bottlerocket linux distribution for enhanced security of worker nodes
 
 Some of the config options can be set as per your requirements in pulumi.dev.yaml file. Pulumi keeps all the config in this file.
-
+#### TO DO
+Make sure worker nodes have IMDSv2 enabled in launch template settings [https://blog.checkpoint.com/2020/12/07/aws-instance-metadata-service-imds-best-practices/]
 ### Requirements
 1. Pulumi CLI
 2. Appropriate AWS credentials in the form of environment variables, profile, or ec2 role.
